@@ -63,9 +63,9 @@ const renderOutput = () => {
     <div className=" flex flex-col h-[100vh] w-full px-10 py-10 items-center max-w-[1440px] mx-auto ">
       
       <h1 className="text-3xl font-semibold" >API JSON Renderer</h1>
-    <div className="flex justify-between w-full px-6 py-10" >
-    <div className="flex flex-col gap-6 max-w-[50%] w-full " >
-     <div className=" flex gap-4 max-w-[450px] w-full">
+    <div className="flex  gap-4 flex-wrap lg:flex-nowrap justify-center lg:justify-between w-full px-6 py-10" >
+    <div className="flex flex-col gap-6 lg:max-w-[50%] md:min-w-[400px] w-full " >
+     <div className=" flex gap-4  w-full">
         <input
           type="text"
           placeholder="Enter API endpoint"
@@ -76,7 +76,7 @@ const renderOutput = () => {
         <button className=" bg-green-500 text-white  px-[20px] py-[10px] rounded-lg font-semibold" onClick={fetchData}>GET</button>
       </div>
 
-      <div className="  border-black/30 border-2 rounded-lg p-2 max-w-[450px] w-full">
+      <div className="  border-black/30 border-2 rounded-lg p-2  w-full">
         <textarea
           value={jsonData}
           onChange={(e) => setJsonData(e.target.value)}
@@ -86,7 +86,7 @@ const renderOutput = () => {
         />
       </div>
 
-      <div className=" flex max-w-[450px] w-full gap-4">
+      <div className=" flex  w-full gap-4">
         <select
           value={outputType}
            className=" border-black border-2 rounded-lg px-3 w-full text-sm "
@@ -99,7 +99,7 @@ const renderOutput = () => {
       </div>
      </div>
 
-      <div className=" max-w-[50%] flex flex-col gap-3 w-full">
+      <div className=" lg:max-w-[50%] md:min-w-[400px] flex flex-col gap-3 w-full">
         <h2 className="text-2xl font-semibold">Rendered Output:</h2>
         <div className="">  {statusMessage}</div>
         <div
